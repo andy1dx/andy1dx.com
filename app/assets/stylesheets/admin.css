@@ -34,6 +34,7 @@
 }
 .admin-main .row {
   width: 100% !important;
+  max-width: 100% !important;
 }
 .card .text-white .bg-primary h3{
   color:#ffffff;

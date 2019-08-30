@@ -1,4 +1,5 @@
 class Admins::CategoriesController < ApplicationController
+  before_action :authenticate_admin!
   def index
     @categories = Category.all
   end
@@ -6,7 +7,7 @@ class Admins::CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save() #save data 
-      redirect_to admins_categories_path
+      redirect_to admins_banners_path
     else
       render 'new' #if failed render new to disply errror
     end

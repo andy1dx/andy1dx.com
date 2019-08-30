@@ -3,3 +3,7 @@ gem 'jquery-rails'
 gem 'devise'
 
 gem 'kaminari'
+
+# image upload
+gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 4.3'

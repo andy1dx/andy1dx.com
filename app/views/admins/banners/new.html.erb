@@ -1,0 +1,14 @@
+<%= render 'admins/layout/header' %>
+<%= render 'admins/layout/sidebar' %>
+<div class="admin-main">
+  <div class="container">
+  	<div class="row">
+  	  <div class="col-md-12">
+  	  	<div class="card border-primary mt-5">
+		  <div class="card-header bg-primary">
+		    <h3 class="text-white">NEW CATEGORIES</h3>
+		  </div>  	  		
+      <%= render 'form', banner: @banner, url: admins_banners_path %>
+  	</div>
+  </div>
+</div>
