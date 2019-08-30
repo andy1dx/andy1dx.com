@@ -11,3 +11,7 @@ Category.create!([
   { name: 'Learning' },
   { name: 'Travel' }
 ])
+
+Admin.create!([
+  { email: 'andy.haz3@gmail.com', password:'andy12345'}
+])

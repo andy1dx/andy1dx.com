@@ -1,0 +1,5 @@
+gem "jquery-slick-rails"
+gem 'jquery-rails'
+gem 'devise'
+
+gem 'kaminari'

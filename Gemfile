@@ -32,9 +32,6 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem "jquery-slick-rails"
-gem 'jquery-rails'
-gem 'devise'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.3.1'
@@ -59,6 +56,11 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+end
+
+gemfiles = ['Gemfile.project']
+gemfiles.each do |gemfile|
+  instance_eval File.read(gemfile)
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

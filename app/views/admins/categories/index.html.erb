@@ -1,0 +1,36 @@
+<%= render 'admins/layout/header' %>
+<%= render 'admins/layout/sidebar' %>
+<div class="admin-main">
+  <div class="container">
+  	<div class="row">
+  	  <div class="col-md-12">
+  	  	<div class="card border-primary mt-5">
+		  <div class="card-header bg-primary">
+		    <h3 class="text-white">CATEGORIES</h3>
+		  </div>  	  		
+		  <div class="card-body"> 
+        <%= link_to 'NEW CATEGORY', new_admins_category_path, class: 'btn btn-primary pull-right' %>
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">EDIT</th>
+              <th scope="col">DELETE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @categories.each_with_index do |category, index| %>
+            <tr>
+              <th scope="row"><%= index %></th>
+              <td><%= category.name %></td>
+              <td><%= link_to content_tag(:i, '', class: 'fas fa-edit'), edit_admins_category_path(category.id), class: 'text-success' %></td>
+              <td><%= link_to content_tag(:i, '', class: 'fa fa-trash'), admins_category_path(category.id), method: :delete, data: {confirm: 'Are You Sure'}, class: 'text-danger' %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+  	  </div>
+  	</div>
+  </div>
+</div>
