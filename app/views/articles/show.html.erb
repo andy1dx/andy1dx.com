@@ -1,0 +1,57 @@
+<%= render 'layouts/preloader' %>
+<%= render 'layouts/header' %>
+<section class="s-content s-content--top-padding s-content--narrow">
+  <article class="row entry format-standard">
+    <div class="entry__media col-full">
+      <div class="entry__post-thumb">
+        <%= image_tag(@article.image_header.url) if @article.image_header? %>
+      </div>
+    </div>
+    <div class="entry__header col-full">
+      <h1 class="entry__header-title display-1">
+        <%= @article.title %>
+      </h1>
+      <ul class="entry__header-meta">
+        <li class="date"><%= @article.publish_date.strftime('%B %d, %Y') %></li>
+      </ul>
+    </div>
+    <div class="col-full entry__main">
+      <%= @article.body.html_safe %>
+      <div class="entry__taxonomies">
+        <div class="entry__cat">
+          <h5>Posted In: </h5>
+          <span class="entry__tax-list">
+              <a href="#0"><%= @article.category.name %></a>
+            </span>
+          </div> <!-- end entry__cat -->
+        </div> <!-- end s-content__taxonomies -->
+      </div> <!-- s-entry__main -->
+    </article> <!-- end entry/article -->
+    <div class="s-content__entry-nav">
+      <div class="row s-content__nav">
+        <div class="col-six s-content__prev">
+          <% prev_article = get_prev_articles(@article) %>
+          <% if prev_article.present? %>
+            <%= link_to article_path(prev_article.id) do %>
+              <span>Previous Post</span>
+              <%= prev_article.title %> 
+            <% end %>
+          <% end %>
+        </div>
+        <div class="col-six s-content__next">
+          <% next_article = get_next_articles(@article) %>
+          <% if next_article.present? %>
+            <%= link_to article_path(next_article.id) do %>
+              <span>Next Post</span>
+              <%= next_article.title %> 
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div> <!-- end s-content__pagenav -->
+  </article>
+</section> <!-- end s-content -->
+
+
+<%= render 'layouts/footer' %>
+

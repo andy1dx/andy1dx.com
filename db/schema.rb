@@ -27,9 +27,12 @@ ActiveRecord::Schema.define(version: 2019_08_30_025459) do
   create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "body"
-    t.string "image"
+    t.string "image_article"
+    t.string "image_header"
     t.integer "status"
     t.bigint "category_id"
+    t.integer "sort_order"
+    t.date "publish_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_articles_on_category_id"
@@ -43,7 +46,7 @@ ActiveRecord::Schema.define(version: 2019_08_30_025459) do
     t.string "url"
     t.bigint "category_id"
     t.bigint "article_id"
-    t.integer "order"
+    t.integer "sort_order"
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

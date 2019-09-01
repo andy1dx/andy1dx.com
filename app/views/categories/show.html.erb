@@ -1,0 +1,40 @@
+<%= render 'layouts/preloader' %>
+<%= render 'layouts/header' %>
+<section class="s-content s-content--top-padding">
+  <div class="row narrow">
+    <div class="col-full s-content__header" data-aos="fade-up">
+      <h1 class="display-1 display-1--with-line-sep">ALL ARTICLES</h1>
+    </div>
+  </div>
+  <div class="row entries-wrap add-top-padding wide">
+    <div class="entries">
+      <% @articles.each do |article| %>  
+        <article class="col-block">
+          <div class="item-entry" data-aos="zoom-in">
+            <div class="item-entry__thumb">
+              <%= link_to image_tag(article.image_header.url), article_path(article.id), class: 'item-entry__thumb-link' if article.image_header? %>
+            </div>
+            <div class="item-entry__text">
+              <div class="item-entry__cat">
+                <a href="category.html"><%= article.category.name %></a> 
+              </div>
+              <h1 class="item-entry__title"><%= link_to article.title, article_path(article.id) %></h1>
+                <div class="item-entry__date">
+                  <%= link_to article.publish_date.strftime('%B %d, %Y') %>, article_path(article.id) %>
+                </div>
+            </div>
+          </div> <!-- item-entry -->
+        </article> <!-- end article -->
+      <% end %>
+    </div> <!-- end entries -->
+  </div> <!-- end entries-wrap -->
+  <div class="row pagination-wrap">
+    <div class="col-full">
+      <%= paginate @articles %>
+      </nav>
+    </div>
+  </div>
+</section> <!-- end s-content -->
+
+<%= render 'layouts/footer' %>
+

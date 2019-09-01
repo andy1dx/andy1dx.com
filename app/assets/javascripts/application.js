@@ -15,11 +15,14 @@
 //= require bootstrap
 //= require jquery_ujs
 //= require activestorage
-//= require turbolinks
 //= require jquery.slick
+//= require tinymce
+//= require tinymce-jquery
+//= require bootstrap-datepicker
 
 // template js
 //= require template/modernizr
 
 //= require_tree ./custom/
 
+$('.datepicker').datepicker();

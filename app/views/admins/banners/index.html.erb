@@ -15,6 +15,7 @@
             <tr>
               <th scope="col">#</th>
               <th scope="col">TITLE</th>
+              <th scope="col">CATEGORY</th>
               <th scope="col">IMAGE</th>
               <th scope="col">URL</th>
               <th scope="col">EDIT</th>
@@ -26,6 +27,7 @@
               <tr>
                 <th scope="row"><%= index + 1 %></th>
                 <td><%= banner.title %></td>
+                <td><%= banner.category.name %></td>
                 <td><%= image_tag(banner.image_banner.url, alt: banner.image_alt) if banner.image_banner? %></td>
                 <td><%= generate_url(banner) %></td>
                 <td><%= link_to content_tag(:i, '', class: 'fas fa-edit'), edit_admins_banner_path(banner.id), class: 'text-success' %></td>

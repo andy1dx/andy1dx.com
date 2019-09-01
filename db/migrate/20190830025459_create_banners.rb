@@ -9,7 +9,7 @@ class CreateBanners < ActiveRecord::Migration[5.2]
 
       t.references :category, foreign_key: true
       t.references :article, foreign_key: true
-      t.integer :order
+      t.integer :sort_order
       t.integer :status
       
       t.timestamps

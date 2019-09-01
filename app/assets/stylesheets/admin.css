@@ -31,6 +31,8 @@
 .admin-main {
     padding-left: 221px;
     padding-top: 80px;
+    background-color: #ffffff !important;
+    min-height: calc(100vh); 
 }
 .admin-main .row {
   width: 100% !important;
@@ -45,4 +47,10 @@
 
 .admin-main, .admin-main .btn {
     font-size: 19px;
+}
+.datepicker td, .datepicker th{
+  padding: 15px 30px !important;
+}
+.datepicker{
+  font-size: 15px !important;
 }

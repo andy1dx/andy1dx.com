@@ -2,7 +2,7 @@ class Admins::BannersController < ApplicationController
   before_action :authenticate_admin!
 
   def index
-    @banners = Banner.where(status: 1)
+    @banners = Banner.where(status: 1).order('sort_order IS NULL').order(sort_order: 'ASC', id: 'ASC') 
   end
 
   def new
@@ -31,9 +31,18 @@ class Admins::BannersController < ApplicationController
     end
   end
 
+  def destroy
+    @banner = Banner.find(params[:id])
+    if(@banner.update(:status => 0))
+      redirect_to admins_banners_path
+    else
+      redirect_to admins_banners_path
+    end 
+  end
+
   private
 
   def banner_params
-  	params.require(:banner).permit(:title, :url, :use_url, :article_id, :category_id, :image_banner, :image_alt).merge(status: 1)
+  	params.require(:banner).permit(:title, :url, :use_url, :article_id, :category_id, :image_banner, :image_alt, :sort_order).merge(status: 1)
   end
 end

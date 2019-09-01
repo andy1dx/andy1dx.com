@@ -86,6 +86,9 @@ body {
   margin: 0;
   padding: 0;
 }
+.s-content {
+  font-size: 1.8rem;  
+}
 
 /* ------------------------------------------------------------------- 
  * ## links
@@ -4250,7 +4253,11 @@ footer [class*="s-footer__"] > .row [class*="col-"]:last-child {
 #cForm input[type="submit"], #cForm .btn {
   margin-top: 6rem;
 }
-.s-featured > .row, .s-content > .row, .s-extra > .row > .s-footer > .row{
+.s-featured > .row, .s-content > .row, .s-extra > .row > .s-footer > .row, .s-extra > .row{
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+.s-footer .row, .s-content__entry-nav .row, .comments-wrap .row {
   margin-right: auto !important;
   margin-left: auto !important;
 }
@@ -4258,4 +4265,15 @@ footer [class*="s-footer__"] > .row [class*="col-"]:last-child {
 .full-width {
   width: 100%;
   margin-right: 0;
+}
+body {
+  background-color: #111860 !important;
+}
+
+.entries{
+  width: 100%;
+}
+
+a:hover {
+  text-decoration: none !important;
 }
