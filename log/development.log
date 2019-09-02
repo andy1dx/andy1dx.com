@@ -45840,3 +45840,919 @@ DEPRECATION WARNING: Dangerous query method (method whose arguments are used as 
 Completed 200 OK in 1847ms (Views: 1837.2ms | ActiveRecord: 7.4ms)
 
 
+Started GET "/about" for ::1 at 2019-09-02 13:30:18 +0900
+Processing by AboutsController#show as HTML
+  Rendering abouts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.3ms)
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (6.2ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+  Rendered abouts/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 241ms (Views: 238.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/about" for ::1 at 2019-09-02 13:34:14 +0900
+Processing by AboutsController#show as HTML
+  Rendering abouts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (4.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered abouts/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 214ms (Views: 212.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/about" for ::1 at 2019-09-02 13:34:37 +0900
+Processing by AboutsController#show as HTML
+  Rendering abouts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered abouts/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 165ms (Views: 162.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/about" for ::1 at 2019-09-02 13:36:57 +0900
+Processing by AboutsController#show as HTML
+  Rendering abouts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (9.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered abouts/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 216ms (Views: 213.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2019-09-02 13:37:03 +0900
+Processing by HomeController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "sort_order IS NULL". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /Users/user/Documents/PROJECT/andy1dx.com/app/controllers/home_controller.rb:3)
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (3.1ms)
+  [1m[36mBanner Load (1.2ms)[0m  [1m[34mSELECT  `banners`.* FROM `banners` WHERE `banners`.`status` = 1 ORDER BY sort_order IS NULL, `banners`.`sort_order` ASC, `banners`.`id` ASC LIMIT 4[0m
+  ↳ app/views/home/_banner.html.erb:5
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/home/_banner.html.erb:10
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/home/_banner.html.erb:10
+  Rendered home/_banner.html.erb (7.5ms)
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`status` = 1 ORDER BY `articles`.`publish_date` DESC LIMIT 15 OFFSET 0[0m
+  ↳ app/views/home/_articles.html.erb:4
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/home/_articles.html.erb:10
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_articles.html.erb:10
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_articles.html.erb:10
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_articles.html.erb:10
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/home/_articles.html.erb:10
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/_articles.html.erb:10
+  Rendered home/_articles.html.erb (24.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered home/index.html.erb within layouts/application (39.7ms)
+Completed 200 OK in 164ms (Views: 154.7ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/about" for ::1 at 2019-09-02 13:37:07 +0900
+Processing by AboutsController#show as HTML
+  Rendering abouts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered abouts/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 149ms (Views: 147.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/about" for ::1 at 2019-09-02 13:38:02 +0900
+Processing by AboutsController#show as HTML
+  Rendering abouts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (4.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered abouts/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 221ms (Views: 219.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/about" for ::1 at 2019-09-02 13:38:10 +0900
+Processing by AboutsController#show as HTML
+  Rendering abouts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered abouts/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 123ms (Views: 121.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-09-02 13:38:25 +0900
+Processing by HomeController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "sort_order IS NULL". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /Users/user/Documents/PROJECT/andy1dx.com/app/controllers/home_controller.rb:3)
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.3ms)
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (4.0ms)
+  [1m[36mBanner Load (0.9ms)[0m  [1m[34mSELECT  `banners`.* FROM `banners` WHERE `banners`.`status` = 1 ORDER BY sort_order IS NULL, `banners`.`sort_order` ASC, `banners`.`id` ASC LIMIT 4[0m
+  ↳ app/views/home/_banner.html.erb:5
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/home/_banner.html.erb:10
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/home/_banner.html.erb:10
+  Rendered home/_banner.html.erb (5.5ms)
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`status` = 1 ORDER BY `articles`.`publish_date` DESC LIMIT 15 OFFSET 0[0m
+  ↳ app/views/home/_articles.html.erb:4
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/home/_articles.html.erb:10
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_articles.html.erb:10
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_articles.html.erb:10
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_articles.html.erb:10
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/home/_articles.html.erb:10
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/_articles.html.erb:10
+  Rendered home/_articles.html.erb (34.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered home/index.html.erb within layouts/application (49.1ms)
+Completed 200 OK in 190ms (Views: 181.3ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/contact" for ::1 at 2019-09-02 13:38:30 +0900
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered contacts/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 146ms (Views: 144.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/about" for ::1 at 2019-09-02 13:38:34 +0900
+Processing by AboutsController#show as HTML
+  Rendering abouts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.3ms)
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered abouts/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 120ms (Views: 117.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/about" for ::1 at 2019-09-02 13:39:02 +0900
+Processing by AboutsController#show as HTML
+  Rendering abouts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered abouts/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 207ms (Views: 204.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/about" for ::1 at 2019-09-02 13:39:16 +0900
+Processing by AboutsController#show as HTML
+  Rendering abouts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (4.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered abouts/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 112ms (Views: 110.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/about" for ::1 at 2019-09-02 13:39:47 +0900
+Processing by AboutsController#show as HTML
+  Rendering abouts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.4ms)
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (4.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered abouts/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 150ms (Views: 148.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/about" for ::1 at 2019-09-02 13:41:08 +0900
+Processing by AboutsController#show as HTML
+  Rendering abouts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.3ms)
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered abouts/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 151ms (Views: 148.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/about" for ::1 at 2019-09-02 13:45:09 +0900
+Processing by AboutsController#show as HTML
+  Rendering abouts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.3ms)
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (5.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered abouts/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 232ms (Views: 230.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/about" for ::1 at 2019-09-02 13:46:25 +0900
+Processing by AboutsController#show as HTML
+  Rendering abouts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.4ms)
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (4.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered abouts/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 211ms (Views: 209.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/about" for ::1 at 2019-09-02 13:47:03 +0900
+Processing by AboutsController#show as HTML
+  Rendering abouts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (6.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered abouts/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 170ms (Views: 168.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/about" for ::1 at 2019-09-02 13:48:02 +0900
+Processing by AboutsController#show as HTML
+  Rendering abouts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.4ms)
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered abouts/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 152ms (Views: 150.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/about" for ::1 at 2019-09-02 13:51:02 +0900
+Processing by AboutsController#show as HTML
+  Rendering abouts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (4.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered abouts/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 169ms (Views: 167.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/about" for ::1 at 2019-09-02 13:53:50 +0900
+Processing by AboutsController#show as HTML
+  Rendering abouts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered abouts/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 182ms (Views: 180.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/about" for ::1 at 2019-09-02 13:59:01 +0900
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/user/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AboutsController#show as HTML
+  Rendering abouts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered abouts/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 156ms (Views: 153.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/contact" for ::1 at 2019-09-02 13:59:09 +0900
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered contacts/show.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 158ms (Views: 156.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/contact" for ::1 at 2019-09-02 13:59:32 +0900
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.3ms)
+  [1m[36mCategory Load (54.9ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (59.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered contacts/show.html.erb within layouts/application (64.4ms)
+Completed 200 OK in 257ms (Views: 200.8ms | ActiveRecord: 54.9ms)
+
+
+Started GET "/contact" for ::1 at 2019-09-02 14:01:33 +0900
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.5ms)
+  [1m[36mCategory Load (1.8ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (6.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered contacts/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 275ms (Views: 272.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/contact" for ::1 at 2019-09-02 14:02:15 +0900
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+  Rendered contacts/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 153ms (Views: 150.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/contact" for ::1 at 2019-09-02 14:02:31 +0900
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.3ms)
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (6.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+  Rendered contacts/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 159ms (Views: 156.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/contact" for ::1 at 2019-09-02 14:02:42 +0900
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.3ms)
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (5.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+  Rendered contacts/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 169ms (Views: 167.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/contact" for ::1 at 2019-09-02 14:09:50 +0900
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/user/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.3ms)
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (6.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered contacts/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 222ms (Views: 218.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/contact" for ::1 at 2019-09-02 14:16:43 +0900
+  [1m[35m (1.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/user/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.6ms)
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (17.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered contacts/show.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 383ms (Views: 377.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/contact" for ::1 at 2019-09-02 14:17:25 +0900
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (6.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered contacts/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 212ms (Views: 209.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/contact" for ::1 at 2019-09-02 14:23:42 +0900
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/user/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.6ms)
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (16.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+  Rendered contacts/show.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 354ms (Views: 347.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contact" for ::1 at 2019-09-02 14:24:10 +0900
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.4ms)
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (6.5ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+  Rendered contacts/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 195ms (Views: 193.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2019-09-02 16:25:24 +0900
+  [1m[35m (2.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/user/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "sort_order IS NULL". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /Users/user/Documents/PROJECT/andy1dx.com/app/controllers/home_controller.rb:3)
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.4ms)
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (26.5ms)
+  [1m[36mBanner Load (1.4ms)[0m  [1m[34mSELECT  `banners`.* FROM `banners` WHERE `banners`.`status` = 1 ORDER BY sort_order IS NULL, `banners`.`sort_order` ASC, `banners`.`id` ASC LIMIT 4[0m
+  ↳ app/views/home/_banner.html.erb:5
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/home/_banner.html.erb:10
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/home/_banner.html.erb:10
+  Rendered home/_banner.html.erb (24.8ms)
+  [1m[36mArticle Load (1.9ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`status` = 1 ORDER BY `articles`.`publish_date` DESC LIMIT 15 OFFSET 0[0m
+  ↳ app/views/home/_articles.html.erb:4
+  [1m[36mCategory Load (2.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/home/_articles.html.erb:10
+  [1m[36mCACHE Category Load (0.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_articles.html.erb:10
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_articles.html.erb:10
+  [1m[36mCACHE Category Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_articles.html.erb:10
+  [1m[36mCategory Load (2.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/home/_articles.html.erb:10
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/_articles.html.erb:10
+  Rendered home/_articles.html.erb (50.8ms)
+  Rendered layouts/_footer.html.erb (2.5ms)
+  Rendered home/index.html.erb within layouts/application (112.8ms)
+Completed 200 OK in 611ms (Views: 554.3ms | ActiveRecord: 28.1ms)
+
+
+Started GET "/contact" for ::1 at 2019-09-02 16:25:31 +0900
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.3ms)
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (17.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered contacts/show.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 275ms (Views: 267.3ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/contact" for ::1 at 2019-09-02 16:28:09 +0900
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.3ms)
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (5.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered contacts/show.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 207ms (Views: 204.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/contact" for ::1 at 2019-09-02 16:29:05 +0900
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.4ms)
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (4.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered contacts/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 226ms (Views: 224.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/contact" for ::1 at 2019-09-02 16:30:13 +0900
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered contacts/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 191ms (Views: 189.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/contact" for ::1 at 2019-09-02 16:31:29 +0900
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.3ms)
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (6.0ms)
+  Rendered contacts/show.html.erb within layouts/application (551.9ms)
+Completed 500 Internal Server Error in 555ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007fd2e46fd240>:0x00007fd2e82384b8>):
+    58:                             <%= text_area_tag "cMessage", '', class:"full-width", placeholder:"Your Message*" %>
+    59:                         </div>
+    60: 
+    61:                             <%= f.submit "Send Message", class:"submit btn btn--primary btn--large full-width" %>
+    62: 
+    63:                     </fieldset>
+    64:                 <% end %>
+  
+app/views/contacts/show.html.erb:61:in `block in _app_views_contacts_show_html_erb__4438362825906378323_70271907252280'
+app/views/contacts/show.html.erb:43:in `_app_views_contacts_show_html_erb__4438362825906378323_70271907252280'
+Started GET "/contact" for ::1 at 2019-09-02 16:31:39 +0900
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered contacts/show.html.erb within layouts/application (182.0ms)
+Completed 500 Internal Server Error in 184ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `submit' for #<#<Class:0x00007fd2e46fd240>:0x00007fd2e8dcdfd0>
+Did you mean?  submit_tag):
+    58:                             <%= text_area_tag "cMessage", '', class:"full-width", placeholder:"Your Message*" %>
+    59:                         </div>
+    60: 
+    61:                             <%= submit "Send Message", class:"submit btn btn--primary btn--large full-width" %>
+    62: 
+    63:                     </fieldset>
+    64:                 <% end %>
+  
+app/views/contacts/show.html.erb:61:in `block in _app_views_contacts_show_html_erb__4438362825906378323_70271913336980'
+app/views/contacts/show.html.erb:43:in `_app_views_contacts_show_html_erb__4438362825906378323_70271913336980'
+Started GET "/contact" for ::1 at 2019-09-02 16:31:48 +0900
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.3ms)
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (4.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered contacts/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 232ms (Views: 230.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/contact" for ::1 at 2019-09-02 16:32:09 +0900
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (4.6ms)
+  Rendered contacts/show.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `submit' for nil:NilClass):
+    58:                             <%= text_area_tag "cMessage", '', class:"full-width", placeholder:"Your Message*" %>
+    59:                         </div>
+    60: 
+    61:                             <%= f.submit "Send Message", class:"submit btn btn--primary btn--large full-width" %>
+    62: 
+    63:                     </fieldset>
+    64:                 <% end %>
+  
+app/views/contacts/show.html.erb:61:in `block in _app_views_contacts_show_html_erb__4438362825906378323_70271872988180'
+app/views/contacts/show.html.erb:43:in `_app_views_contacts_show_html_erb__4438362825906378323_70271872988180'
+Started GET "/contact" for ::1 at 2019-09-02 16:33:07 +0900
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered contacts/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 214ms (Views: 211.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/contact" for ::1 at 2019-09-02 16:33:45 +0900
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.3ms)
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (12.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered contacts/show.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 154ms (Views: 148.6ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/contacts" for ::1 at 2019-09-02 16:33:47 +0900
+Processing by ContactsController#send_mail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fQmmQKF1Aof1rKelqZTmh7iHssDzkIMdtIysQZkMLSfe/lfbyPLTOCwC+NffQ6mmewc8vppXVse1eefsX5I2bQ==", "cName"=>"", "cEmail"=>"", "cWebsite"=>"", "cMessage"=>"", "commit"=>"Send Message"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"fQmmQKF1Aof1rKelqZTmh7iHssDzkIMdtIysQZkMLSfe/lfbyPLTOCwC+NffQ6mmewc8vppXVse1eefsX5I2bQ==", "cName"=>"", "cEmail"=>"", "cWebsite"=>"", "cMessage"=>"", "commit"=>"Send Message", "controller"=>"contacts", "action"=>"send_mail"} permitted: false>):
+  
+app/controllers/contacts_controller.rb:3:in `abort'
+app/controllers/contacts_controller.rb:3:in `send_mail'
+Started POST "/contacts" for ::1 at 2019-09-02 16:35:29 +0900
+Processing by ContactsController#send_mail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fQmmQKF1Aof1rKelqZTmh7iHssDzkIMdtIysQZkMLSfe/lfbyPLTOCwC+NffQ6mmewc8vppXVse1eefsX5I2bQ==", "cName"=>"", "cEmail"=>"", "cWebsite"=>"", "cMessage"=>"", "commit"=>"Send Message"}
+ContactMailer#contact_mail: processed outbound mail in 0.5ms
+Completed 500 Internal Server Error in 280ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"fQmmQKF1Aof1rKelqZTmh7iHssDzkIMdtIysQZkMLSfe/lfbyPLTOCwC+NffQ6mmewc8vppXVse1eefsX5I2bQ==", "cName"=>"", "cEmail"=>"", "cWebsite"=>"", "cMessage"=>"", "commit"=>"Send Message", "controller"=>"contacts", "action"=>"send_mail"} permitted: false>):
+  
+app/mailers/contact_mailer.rb:6:in `abort'
+app/mailers/contact_mailer.rb:6:in `contact_mail'
+app/controllers/contacts_controller.rb:3:in `send_mail'
+Started POST "/contacts" for ::1 at 2019-09-02 16:36:00 +0900
+Processing by ContactsController#send_mail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fQmmQKF1Aof1rKelqZTmh7iHssDzkIMdtIysQZkMLSfe/lfbyPLTOCwC+NffQ6mmewc8vppXVse1eefsX5I2bQ==", "cName"=>"", "cEmail"=>"", "cWebsite"=>"", "cMessage"=>"", "commit"=>"Send Message"}
+ContactMailer#contact_mail: processed outbound mail in 0.9ms
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `cName' for #<ActionController::Parameters:0x00007fd2e6909de8>):
+  
+app/mailers/contact_mailer.rb:6:in `contact_mail'
+app/controllers/contacts_controller.rb:3:in `send_mail'
+Started POST "/contacts" for ::1 at 2019-09-02 16:36:11 +0900
+Processing by ContactsController#send_mail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fQmmQKF1Aof1rKelqZTmh7iHssDzkIMdtIysQZkMLSfe/lfbyPLTOCwC+NffQ6mmewc8vppXVse1eefsX5I2bQ==", "cName"=>"", "cEmail"=>"", "cWebsite"=>"", "cMessage"=>"", "commit"=>"Send Message"}
+ContactMailer#contact_mail: processed outbound mail in 0.2ms
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (""):
+  
+app/mailers/contact_mailer.rb:6:in `abort'
+app/mailers/contact_mailer.rb:6:in `contact_mail'
+app/controllers/contacts_controller.rb:3:in `send_mail'
+Started GET "/contact" for ::1 at 2019-09-02 16:46:10 +0900
+  [1m[35m (1.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/user/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.3ms)
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (14.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered contacts/show.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 214ms (Views: 207.8ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/contacts" for ::1 at 2019-09-02 16:46:13 +0900
+Processing by ContactsController#send_mail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ohq+scoJoURnHsI1Kv/bmfVzG9Vfzg+Xv1k+m+8SOEEB7U8qo45w+76wnUdcKJS4NvOVqzYJ2k2+rHU2KYwjCw==", "cName"=>"", "cEmail"=>"", "cWebsite"=>"", "cMessage"=>"", "commit"=>"Send Message"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (["Please input your name", "Please input your email", "Please input your website", "Please input your message"]):
+  
+app/controllers/contacts_controller.rb:5:in `abort'
+app/controllers/contacts_controller.rb:5:in `send_mail'
+Started POST "/contacts" for ::1 at 2019-09-02 16:50:42 +0900
+Processing by ContactsController#send_mail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ohq+scoJoURnHsI1Kv/bmfVzG9Vfzg+Xv1k+m+8SOEEB7U8qo45w+76wnUdcKJS4NvOVqzYJ2k2+rHU2KYwjCw==", "cName"=>"", "cEmail"=>"", "cWebsite"=>"", "cMessage"=>"", "commit"=>"Send Message"}
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (9.7ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (29.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered contacts/show.html.erb within layouts/application (33.3ms)
+Redirected to 
+Completed 500 Internal Server Error in 278ms (Views: 259.3ms | ActiveRecord: 16.5ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/contacts_controller.rb:10:in `send_mail'
+Started POST "/contacts" for ::1 at 2019-09-02 16:51:04 +0900
+Processing by ContactsController#send_mail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ohq+scoJoURnHsI1Kv/bmfVzG9Vfzg+Xv1k+m+8SOEEB7U8qo45w+76wnUdcKJS4NvOVqzYJ2k2+rHU2KYwjCw==", "cName"=>"", "cEmail"=>"", "cWebsite"=>"", "cMessage"=>"", "commit"=>"Send Message"}
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.4ms)
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (19.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered contacts/show.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 202ms (Views: 194.0ms | ActiveRecord: 7.7ms)
+
+
+Started POST "/contacts" for ::1 at 2019-09-02 16:51:43 +0900
+Processing by ContactsController#send_mail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nEAmLFMSSsOP/j0/gqrHUe4QXzE6M/f8uGhdrn7hfjA/t9e3OpWbfFZQYk30fYhwLZDRT1P0Iia5nRYDuH9leg==", "cName"=>"Abdy", "cEmail"=>"andy.haz3@gmail.com", "cWebsite"=>"fsdfs", "cMessage"=>"qfsdfsd", "commit"=>"Send Message"}
+  Rendering contact_mailer/contact_mail.html.erb within layouts/mailer
+  Rendered contact_mailer/contact_mail.html.erb within layouts/mailer (0.5ms)
+  Rendering contact_mailer/contact_mail.text.erb within layouts/mailer
+  Rendered contact_mailer/contact_mail.text.erb within layouts/mailer (0.5ms)
+ContactMailer#contact_mail: processed outbound mail in 521.8ms
+Sent mail to andy.haz3@gmail.com (19.5ms)
+Date: Mon, 02 Sep 2019 16:51:44 +0900
+From: andy.haz3@gmail.com
+To: andy.haz3@gmail.com
+Message-ID: <5d6cca1055cef_4363fe9735e291875099@USERnoMacBook-Pro.local.mail>
+Subject: Email  From Blog SITE
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5d6cca1053689_4363fe9735e29187498f";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5d6cca1053689_4363fe9735e29187498f
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+There is a contact mail from: blog.andy1dx.xyz
+name : Abdy
+email : andy.haz3@gmail.com
+website : fsdfs
+message : 
+qfsdfsd
+
+----==_mimepart_5d6cca1053689_4363fe9735e29187498f
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      There is a contact mail from: blog.andy1dx.xyz
+      name : Abdy
+      email : andy.haz3@gmail.com
+      website : fsdfs
+      message : 
+      qfsdfsd
+    </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5d6cca1053689_4363fe9735e29187498f--
+
+Redirected to http://localhost:3000/contact
+Completed 302 Found in 563ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for ::1 at 2019-09-02 16:51:44 +0900
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.2ms)
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered contacts/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 256ms (Views: 254.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/contacts" for ::1 at 2019-09-02 16:55:57 +0900
+Processing by ContactsController#send_mail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zbiFKHSdQEIjMLkW0+uOhyp9Dx8eIoHx4VHdSKm0U/BuT3SzHRqR/fqe5mSlPMGm6f2BYXflVCvgpJblbypIug==", "cName"=>"ddfsdf", "cEmail"=>"andy.haz3@gmail.com", "cWebsite"=>"dasda", "cMessage"=>"das", "commit"=>"Send Message"}
+  Rendering contact_mailer/contact_mail.html.erb within layouts/mailer
+  Rendered contact_mailer/contact_mail.html.erb within layouts/mailer (0.5ms)
+  Rendering contact_mailer/contact_mail.text.erb within layouts/mailer
+  Rendered contact_mailer/contact_mail.text.erb within layouts/mailer (0.4ms)
+ContactMailer#contact_mail: processed outbound mail in 14.1ms
+Sent mail to andy.haz3@gmail.com (3.6ms)
+Date: Mon, 02 Sep 2019 16:55:58 +0900
+From: andy.haz3@gmail.com
+To: andy.haz3@gmail.com
+Message-ID: <5d6ccb0e5299_4363fe9735e26c0752fa@USERnoMacBook-Pro.local.mail>
+Subject: Email  From Blog SITE
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5d6ccb0e48ef_4363fe9735e26c0751ae";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5d6ccb0e48ef_4363fe9735e26c0751ae
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+There is a contact mail from: blog.andy1dx.xyz
+name : ddfsdf
+email : andy.haz3@gmail.com
+website : dasda
+message : 
+das
+
+----==_mimepart_5d6ccb0e48ef_4363fe9735e26c0751ae
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      There is a contact mail from: blog.andy1dx.xyz
+      name : ddfsdf
+      email : andy.haz3@gmail.com
+      website : dasda
+      message : 
+      das
+    </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5d6ccb0e48ef_4363fe9735e26c0751ae--
+
+Redirected to http://localhost:3000/contact
+Completed 302 Found in 28ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for ::1 at 2019-09-02 16:55:58 +0900
+Processing by ContactsController#show as HTML
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered layouts/_preloader.html.erb (0.3ms)
+  [1m[36mCategory Load (2.1ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/layouts/_header.html.erb:24
+  Rendered layouts/_header.html.erb (22.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+  Rendered contacts/show.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 218ms (Views: 209.1ms | ActiveRecord: 8.1ms)
+
+

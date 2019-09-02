@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resource :about, only: [:show]
   resource :contact, only: [:show]
   post 'search', to: 'search#show'
+  post 'contacts', to: 'contacts#send_mail'
   namespace :admins do
     root to: "dashboard#index"
     resources :dashboard
