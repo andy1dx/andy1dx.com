@@ -1,0 +1,42 @@
+<%= render 'admins/layout/header' %>
+<%= render 'admins/layout/sidebar' %>
+<div class="admin-main">
+  <div class="container-fluid">
+  	<div class="row">
+  	  <div class="col-md-12">
+  	  	<div class="card border-primary mt-5">
+		  <div class="card-header bg-primary">
+		    <h3 class="text-white">BANNER</h3>
+		  </div>  	  		
+		  <div class="card-body"> 
+        <%= link_to 'NEW BANNER', new_admins_banner_path, class: 'btn btn-primary pull-right' %>
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">TITLE</th>
+              <th scope="col">CATEGORY</th>
+              <th scope="col">IMAGE</th>
+              <th scope="col">URL</th>
+              <th scope="col">EDIT</th>
+              <th scope="col">DELETE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @banners.each_with_index do |banner, index|%>
+              <tr>
+                <th scope="row"><%= index + 1 %></th>
+                <td><%= banner.title %></td>
+                <td><%= banner.category.name %></td>
+                <td><%= image_tag(banner.image_banner.url, alt: banner.image_alt) if banner.image_banner? %></td>
+                <td><%= generate_url(banner) %></td>
+                <td><%= link_to content_tag(:i, '', class: 'fas fa-edit'), edit_admins_banner_path(banner.id), class: 'text-success' %></td>
+                <td><%= link_to content_tag(:i, '', class: 'fa fa-trash'), admins_banner_path(banner.id), method: :delete, data: {confirm: 'Are You Sure'}, class: 'text-danger' %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+  	  </div>
+  	</div>
+  </div>
+</div>

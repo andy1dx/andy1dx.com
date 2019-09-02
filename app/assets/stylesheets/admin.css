@@ -1,0 +1,56 @@
+.sidenav {
+  height: 100%;
+  width: 220px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 80px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+.admin-main {
+    padding-left: 221px;
+    padding-top: 80px;
+    background-color: #ffffff !important;
+    min-height: calc(100vh); 
+}
+.admin-main .row {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.card .text-white .bg-primary h3{
+  color:#ffffff;
+}
+.btn.btn-primary {
+    line-height: 50px;
+}
+
+.admin-main, .admin-main .btn {
+    font-size: 19px;
+}
+.datepicker td, .datepicker th{
+  padding: 15px 30px !important;
+}
+.datepicker{
+  font-size: 15px !important;
+}

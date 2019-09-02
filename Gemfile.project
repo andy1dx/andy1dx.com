@@ -1,0 +1,13 @@
+gem "jquery-slick-rails"
+gem 'jquery-rails'
+gem 'devise'
+
+gem 'kaminari'
+
+# image upload
+gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 4.3'
+
+gem "simple_form"
+gem 'tinymce-rails'
+gem 'bootstrap-datepicker-rails'

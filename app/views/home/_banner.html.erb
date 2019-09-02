@@ -1,0 +1,19 @@
+<section class="s-featured">
+  <div class="row">
+    <div class="col-full">
+      <div class="featured-slider featured" data-aos="zoom-in">
+        <% @banners.each_with_index do |banner| %>
+          <div class="featured__slide">
+            <div class="entry">
+              <div class="entry__background" style="background-image:url('<%= banner.image_banner.url if banner.image_banner? %>');"></div>
+              <div class="entry__content">
+                <span class="entry__category"><%= link_to banner.category.name, category_path(banner.category.id) %></span>
+                <h1><%= link_to banner.title, generate_url_link(banner) %></h1>
+              </div> <!-- end entry__content -->              
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section> <!-- end s-featured -->

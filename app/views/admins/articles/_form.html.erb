@@ -1,0 +1,48 @@
+
+		  <div class="card-body">
+        <% if article.errors.full_messages.any? %>
+          <% article.errors.full_messages.each do |error_message| %>
+          <div class="alert alert-danger" role="alert"><%= error_message%> <br /></div>
+          <% end %>
+        <% end %>
+        <%= form_for(article, url: url) do |f| %>
+            <div class="form-group">
+              <%= f.label :title %><br />
+              <%= f.text_field :title, autofocus: true, autocomplete: "email", class:"full-width" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :category %><br />
+              <%= f.select :category_id, Category.all.map{ |c| [c.name, c.id] }, { include_blank: 'Please Choose Category' }, { class:"full-width" } %>
+            </div>            
+            <div class="form-group">
+              <%= f.label :image_header %><br />
+              <%= f.file_field :image_header, autofocus: true, autocomplete: "email", class:"full-width"  %>
+            </div>
+            <div class="form-group">
+              <%= f.label :image_article %><br />
+              <%= f.file_field :image_article, autofocus: true, autocomplete: "email", class:"full-width"  %>
+            </div>
+            <div class="form-group">
+              <%= f.label :body %><br />
+              <%= f.text_area :body, class: "tinymce", rows: 40, cols: 120 %>
+              <%= tinymce %>
+            </div>                        
+            <div class="form-group">
+              <%= f.label :sort_order %><br />
+              <%= f.select :sort_order, sort_order_collection(Article.where(status: 1)), { include_blank: true }, { class:"full-width" }%>
+            </div>                
+            <div class="form-group">
+              <%= f.label :publish_date %><br />
+              <%= f.text_field :publish_date, autofocus: true, autocomplete: "publish date", class:"full-width datepicker" %>
+            </div>
+
+            <%= f.submit "SUBMIT", class: 'submit btn btn--primary btn--large full-width' %>
+          <% end %>
+        </div>
+  	  </div>
+<script type="text/javascript">
+  $('.datepicker').datepicker({
+    format: "mm/dd/yyyy",
+    autoclose: true
+  });
+</script>

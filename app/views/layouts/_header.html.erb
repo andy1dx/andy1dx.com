@@ -1,0 +1,37 @@
+<header class="s-header header">
+  <div class="header__logo">
+    <%=  link_to image_tag("logo.svg", alt: 'logo'), root_path, class: 'logo' %>
+  </div> <!-- end header__logo -->
+  <a class="header__search-trigger" href="#0"></a>
+  <div class="header__search">
+    <%= form_for(:search, url:search_path, html: { class: 'header__search-form' }) do |f| %>
+      <label>
+        <span class="hide-content">Search for:</span>
+        <%= text_field_tag 'keyword', nil, placeholder: 'Type Keywords', class: 'search-field', type: 'search' %>
+      </label>
+      <input type="submit" class="search-submit" value="Search">
+    <% end %>
+    <a href="#0" title="Close Search" class="header__overlay-close">Close</a>
+  </div>  <!-- end header__search -->
+  <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
+  <nav class="header__nav-wrap">
+    <h2 class="header__nav-heading h6">Navigate to</h2>
+      <ul class="header__nav">
+        <li class="current"><%= link_to 'Home', root_path %></li>
+        <li class="has-children">
+          <a title="">Categories</a>
+            <ul class="sub-menu">
+              <% generate_category.each do |category| %>
+                <li><a href="category.html"><%= category.name %></a></li>
+              <% end %>
+            </ul>
+        </li>
+        <li>
+          <%= link_to 'Articles', articles_path %>
+        </li>
+        <li><%= link_to 'About', about_path %></li>
+        <li><%= link_to 'Contact', contact_path %></li>
+      </ul> <!-- end header__nav -->
+      <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
+  </nav> <!-- end header__nav-wrap -->
+</header> <!-- s-header -->

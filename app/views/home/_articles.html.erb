@@ -1,0 +1,29 @@
+<section class="s-content">
+  <div class="row entries-wrap wide">
+    <div class="entries">
+      <% @articles.each do |article| %>
+        <article class="col-block">
+          <div class="item-entry" data-aos="zoom-in">
+            <%= link_to image_tag(article.image_header.url), article_path(article.id), class: 'item-entry__thumb-link' if article.image_header? %>
+            <div class="item-entry__text">
+              <div class="item-entry__cat">
+                <%= link_to article.category.name, category_path(article.category.id) %>
+              </div>
+              <h1 class="item-entry__title"><%= link_to article.title, article_path(article.id) %></h1>
+              <div class="item-entry__date">
+                <%= link_to article.publish_date.strftime('%B %d, %Y'), article_path(article.id) %>
+              </div>
+            </div>
+          </div>
+        </article>
+      <% end %>
+    </div> <!-- end entries -->
+  </div> <!-- end entries-wrap -->
+
+  <div class="row pagination-wrap">
+    <div class="col-full">
+      <%= paginate @articles %>
+      </nav>
+    </div>
+  </div>
+</section> <!-- end s-content -->
