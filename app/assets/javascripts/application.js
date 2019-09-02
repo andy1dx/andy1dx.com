@@ -23,6 +23,5 @@
 // template js
 //= require template/modernizr
 
-//= require_tree ./custom/
 
 $('.datepicker').datepicker();
