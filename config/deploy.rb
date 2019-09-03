@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.1"
 
-set :application, "blog andy"
+set :application, "blog_andy"
 set :repo_url, "https://github.com/andybit-okutama/andy1dx.com.git"
 
 # Default branch is :master

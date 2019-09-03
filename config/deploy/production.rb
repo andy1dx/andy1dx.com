@@ -59,3 +59,12 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+
+role :app, %w{deploy_user@13.230.223.86}
+role :web, %w{deploy_user@13.230.223.86}
+role :db,  %w{deploy_user@13.230.223.86}
+set :ssh_options, {
+   keys: %w(<absolute-path-to-your-ec2-key-pair-file>),
+   forward_agent: false,
+   auth_methods: %w(publickey password)
+ }
