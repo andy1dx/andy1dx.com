@@ -16,7 +16,7 @@
             </div>
             <div class="item-entry__text">
               <div class="item-entry__cat">
-                <a href="category.html"><%= article.category.name %></a> 
+                <%= link_to article.category.name, category_path(article.category.id)  %>
               </div>
               <h1 class="item-entry__title"><%= link_to article.title, article_path(article.id) %></h1>
                 <div class="item-entry__date">
