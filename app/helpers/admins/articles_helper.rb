@@ -1,6 +1,6 @@
 module Admins::ArticlesHelper
   def get_prev_articles(article)
-  	prev_id = article.id - 1 unless article.id ==  && article.id == 1
+  	prev_id = article.id - 1 unless article.id == 0 && article.id == 1
   	Article.find(prev_id)
   end
 
