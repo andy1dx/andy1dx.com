@@ -21,7 +21,7 @@
         <div class="entry__cat">
           <h5>Posted In: </h5>
           <span class="entry__tax-list">
-              <a href="#0"><%= @article.category.name %></a>
+              <%= link_to article.category.name, category_path(article.category.id)  %>
             </span>
           </div> <!-- end entry__cat -->
         </div> <!-- end s-content__taxonomies -->
