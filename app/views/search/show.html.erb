@@ -20,7 +20,7 @@
               </div>
               <h1 class="item-entry__title"><%= link_to article.title, article_path(article.id) %></h1>
                 <div class="item-entry__date">
-                  <%= link_to article.publish_date.strftime('%B %d, %Y') %>, article_path(article.id) %>
+                  <%= link_to article.publish_date.strftime('%B %d, %Y'), article_path(article.id) %>
                 </div>
             </div>
           </div> <!-- item-entry -->
