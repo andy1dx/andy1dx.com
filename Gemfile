@@ -43,9 +43,10 @@ end
 
 group :development do
   gem 'capistrano'
-  gem 'capistrano-bundler'
+  gem 'capistrano3-puma'  
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
   gem 'capistrano-passenger', '>= 0.1.1'
-  gem 'capistrano-rails'
   gem 'capistrano-rvm'
   gem 'capistrano-figaro-yml', '~> 1.0.2'  
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.

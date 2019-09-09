@@ -12,3 +12,4 @@
 
 gmail_username: 'andy.haz3@gmail.com'
 gmail_password: 'golen12345'
+SECRET_KEY_BASE: "77fa45a8e7e955dcad6314ecf9aaddea62f1f14e4f0347dba2fbdb3cb9d7b802b47b0257a766c768e16f0fc2f6c2468ca45834d7e344611f96b24c641a6b41e6"

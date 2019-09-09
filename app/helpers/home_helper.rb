@@ -7,7 +7,7 @@ module HomeHelper
     if banner.use_url == true && banner.article_id.blank?
       banner.url
     else
-      "#{request.base_url}/articles/#{banner.article_id}"
+      "http://blog.andy1dx.xyz/articles/#{banner.article_id}"
     end
   end
 end

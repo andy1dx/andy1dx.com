@@ -60,11 +60,12 @@
 #     # password: "please use keys"
 #   }
 
-role :app, %w{deploy_user@13.230.223.86}
-role :web, %w{deploy_user@13.230.223.86}
-role :db,  %w{deploy_user@13.230.223.86}
+role :app, %w{ec2-user@13.113.192.215}
+role :web, %w{ec2-user@13.113.192.215}
+role :db,  %w{ec2-user@13.113.192.215}
 set :ssh_options, {
-   keys: %w(<absolute-path-to-your-ec2-key-pair-file>),
+   keys: %w(/Users/user/Documents/PROJECT/QWS/blog_andy.pem),
    forward_agent: false,
-   auth_methods: %w(publickey password)
+   auth_methods: %w(publickey)
  }
+
