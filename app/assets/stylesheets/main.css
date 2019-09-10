@@ -4280,3 +4280,7 @@ a:hover {
 .sitemap a{
   font-size: 20px
 }
+.entry__main p img{
+  width: 100% !important;
+  margin: 0 !important;
+}
